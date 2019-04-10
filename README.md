@@ -11,6 +11,7 @@
 * [10++ TypeScript Pro tips/patterns with (or without) React](https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680)
 
 ### Gerneral Utility Types
+* [type-zoo](https://github.com/pelotom/type-zoo) - A menagerie of useful type operators for TypeScript
 * [utility-types](https://github.com/piotrwitek/utility-types) - Utility Types for TypeScript (provide compatibility with Flow's Utility Types)
 * [ts-essentials](https://github.com/krzkaczor/ts-essentials) - All essential TypeScript types in one place
 * [typescript-conditional-types](https://github.com/LeDDGroup/typescript-conditional-types) - Helpers for typescript generic types
@@ -18,15 +19,13 @@
  * [typescript-test-utils](https://github.com/LeDDGroup/typescript-test-utils) - Helper types for testing your package exported types
  * [@ktb/type-compare](https://github.com/KonTrax/type-compare) - A collection of comparison utility types for Typescript.
   
-#### Raw
-* [flowup-ngx-common](rawSources/flowup-ngx-common.md)
-
 ###  React Related Utility Types
 * [rex-tils](https://github.com/Hotell/rex-tils#readme) - Type safe utils for redux actions, epics, effects, react/preact default props, various type guards and TypeScript utils, React util components
 
 
 
 ### Typescript Function Utilities
+* [runtypes](https://github.com/pelotom/runtypes)-Runtime validation for static types
 * [@cadre/ts-utils](https://github.com/siggame/Cadre-TS-Utils) - A set of utilities shared between my projects
 
 
