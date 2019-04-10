@@ -11,6 +11,7 @@
 * [10++ TypeScript Pro tips/patterns with (or without) React](https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680)
 
 ### Gerneral Utility Types
+* [typepark](https://github.com/kgtkr/typepark) - a new type collection offering tuple manipulation and `Pipe`
 * [type-zoo](https://github.com/pelotom/type-zoo) - A menagerie of useful type operators for TypeScript
 * [utility-types](https://github.com/piotrwitek/utility-types) - Utility Types for TypeScript (provide compatibility with Flow's Utility Types)
 * [ts-essentials](https://github.com/krzkaczor/ts-essentials) - All essential TypeScript types in one place
