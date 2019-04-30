@@ -1,0 +1,14 @@
+{
+  "name": "typescript-notes",
+  "version": "0.0.0",
+  "description": "my TS playground",
+  "main": "index.js",
+  "repository": "https://github.com/JoshRosenstein/typescript-notes.git",
+  "author": "Josh Rosenstein <josh@joshuarosenstein.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts":{
+    "check":"tsc --noEmit"
+  },
+  "devDependencies": {"typescript":"*"}
+}
