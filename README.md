@@ -1,6 +1,46 @@
 # My Typescript Scratch Pad
 
+## Scratch
+### [known-keys](https://stackoverflow.com/questions/51465182/typescript-remove-index-signature-using-mapped-types)-remove-index-signature-using-mapped-types
+```typescript
+export type KnownKeys<T> = {
+  [K in keyof T]: string extends K ? never : number extends K ? never : K
+} extends { [_ in keyof T]: infer U } ? U : never;
 
+interface Options {
+  key: string;
+  title: string;
+  [dataProperty: string]: string | number;
+}
+type KnownKeysOfOptions = KnownKeys<Options>; // 'key' | 'title';
+// (vs. type KeysOfOptions = keyof Options // string | number;)
+```
+## Cast
+Type cast an argument. If no type is provided it will default to any
+```typescript
+
+export const Cast = <T = any>(arg: any): T => arg;
+
+```
+## Overloading a private function
+Example on overloading private functions
+```typescript
+
+export function someFunction(arg1: string, arg2 = false) {
+  return someFunction;
+
+  function someFunction(arg3: undefined): undefined;
+  function someFunction(arg3: string | number): string;
+  function someFunction(arg3: string | number | undefined) {
+    return typeof arg3 == "undefined"
+      ? undefined
+      : (arg2 && !Number.isNaN(Number(arg3))) || typeof arg3 == "number"
+      ? arg1 + "something"
+      : arg3;
+  }
+}
+
+```
 
 ## References
 
@@ -11,6 +51,9 @@
 * [10++ TypeScript Pro tips/patterns with (or without) React](https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680)
 
 ### Gerneral Utility Types
+*[@meta-utils/types](https://github.com/meta-utils/types/tree/master)-A package containing useful TypeScript types
+* [types used in aurelia](https://github.com/aurelia/aurelia/blob/master/packages/kernel/src/interfaces.ts)
+* [simplytyped](https://github.com/andnp/SimplyTyped) - Yet another typing library. This differs by aiming to be less experimental than others, driven by industry use cases.
 * [typepark](https://github.com/kgtkr/typepark) - a new type collection offering tuple manipulation and `Pipe`
 * [type-zoo](https://github.com/pelotom/type-zoo) - A menagerie of useful type operators for TypeScript
 * [utility-types](https://github.com/piotrwitek/utility-types) - Utility Types for TypeScript (provide compatibility with Flow's Utility Types)
