@@ -1,7 +1,10 @@
-# My Typescript Scratch Pad
+# My Random TS Stuff
 
-## Scratch
-### [known-keys](https://stackoverflow.com/questions/51465182/typescript-remove-index-signature-using-mapped-types)-remove-index-signature-using-mapped-types
+<p align="center"><img src="assets/ts-banner.png" width="95%"/></p>
+
+## Misc
+### known-keys
+[typescript-remove-index-signature-using-mapped-types-remove-index-signature-using-mapped-types](https://stackoverflow.com/questions/51465182/typescript-remove-index-signature-using-mapped-types-remove-index-signature-using-mapped-types)
 ```typescript
 export type KnownKeys<T> = {
   [K in keyof T]: string extends K ? never : number extends K ? never : K
@@ -15,14 +18,14 @@ interface Options {
 type KnownKeysOfOptions = KnownKeys<Options>; // 'key' | 'title';
 // (vs. type KeysOfOptions = keyof Options // string | number;)
 ```
-## Cast
+### Cast
 Type cast an argument. If no type is provided it will default to any
 ```typescript
 
 export const Cast = <T = any>(arg: any): T => arg;
 
 ```
-## Overloading a private function
+### Overloading a private function
 Example on overloading private functions
 ```typescript
 
@@ -44,14 +47,30 @@ export function someFunction(arg1: string, arg2 = false) {
 
 ## References
 
-### TypeScript Resource Collections
+### Collections
 * [dzharii/awesome-typescript](https://github.com/dzharii/awesome-typescript) A collection of awesome TypeScript resources for client-side and server-side development. Write your awesome JavaScript in TypeScript
   
-### Articles
-* [10++ TypeScript Pro tips/patterns with (or without) React](https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680)
+### Articles/Discussions
+#### Releases
+* [Announcing TypeScript 3.4 RC](https://devblogs.microsoft.com/typescript/announcing-typescript-3-4-rc/)
+  *  Propagated generic type arguments, `globalThis`, `const` assertions (`let x = 10 as const`) ,`--incremental flag`
+#### Conditionals
+  * [From [BUG] union extend behavior not the same into a type](https://github.com/Microsoft/TypeScript/issues/30960#issuecomment-489067693)
+    * [conditional-types-in-typescript](https://artsy.github.io/blog/2018/11/21/conditional-types-in-typescript/)
+    *  [TypeScript 2.8: Conditional Types](https://mariusschulz.com/blog/typescript-2-8-conditional-types)
+        *  > Since `NonNullable<T>` checks a naked type parameter, it is distributed over a union type `A | B`. This means that `NonNullable<A | B>` is resolved as `NonNullable<A> | NonNullable<B>`
+#### React Related
+  * [10++ TypeScript Pro tips/patterns with (or without) React](https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680)
+  
+  * [Writing better Reducers with React and Typescript 3.4](https://blog.usejournal.com/writing-better-reducers-with-react-and-typescript-3-4-30697b926ada)
+  * [Typescript & React: Manipulating Prop Types](https://medium.com/@rossbulat/typescript-react-manipulating-prop-types-ec13f841a550)
+
+#### Functional
+* [Learn how to create types for curry and Ramda](https://medium.freecodecamp.org/typescript-curry-ramda-types-f747e99744ab)
+### Tracking Issue
 
 ### Gerneral Utility Types
-*[@meta-utils/types](https://github.com/meta-utils/types/tree/master)-A package containing useful TypeScript types
+* [@meta-utils/types](https://github.com/meta-utils/types/tree/master)-A package containing useful TypeScript types
 * [types used in aurelia](https://github.com/aurelia/aurelia/blob/master/packages/kernel/src/interfaces.ts)
 * [simplytyped](https://github.com/andnp/SimplyTyped) - Yet another typing library. This differs by aiming to be less experimental than others, driven by industry use cases.
 * [typepark](https://github.com/kgtkr/typepark) - a new type collection offering tuple manipulation and `Pipe`
@@ -89,7 +108,7 @@ export function someFunction(arg1: string, arg2 = false) {
 
 ## Issues
 
-## Issues with Hacks
+## Issues with WorkArounds
 * [Microsoft/TypeScript-LiteralString Union Autocomplete #29729](https://github.com/Microsoft/TypeScript/issues/29729) 
 ### WorkAround:
 ```ts
